@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto+Condensed&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/* Color principal: #09eab4 (un verde azulado vibrante para llamar la atención)
+Color secundario: #93fcec (un cian claro para contrastar)
+Color de fondo: #0c3c4c (un azul oscuro para dar profundidad)
+Color de texto: #7a7985 (un gris suave para el texto principal)
+Acentos: #bcbabc (un gris claro para elementos secundarios) y #2c2443 (un morado oscuro para destacar áreas importantes) */
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ebebeb;
+}
+
+header {
+  background-image: linear-gradient(to bottom, #0c3c4c, #08203a);
+  padding: 0 5%;
+  box-shadow: 1px 1px 4px 1px black;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-style: normal;
+}
+
+nav ul {
+  display: flex;
+  color: aliceblue;
+  gap: 3rem;
+}
+li {
+  list-style: none;
+}
+a {
+  color: #bcbabc;
+  text-decoration: none;
+}
+
+main {
+  color: dimgrey;
+  margin-top: 1rem;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #09eab4;
+}
+
+.inicio {
+  padding: 5rem 0;
+  line-height: 50px;
+}
+.inicio h2 {
+  color: #e4e4e4;
+}
+
+.mision {
+  /* border: 2px red solid; */
+  width: 50rem;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------- */
+
+.cuadros {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.box {
+  border: 1px solid rgb(109, 109, 109);
+  border-radius: 9px;
+  max-height: 16rem;
+  width: 24rem;
+  padding: 1rem;
+  background-color: #ffffff16;
+}
+
+.propuesta {
+  width: 40rem;
+  margin: 2rem auto;
+}
+
+/* ---------------------------------------------------------- */
+
+.fab {
+  color: #bcbabc;
+}
+.contacto {
+  color: #212121;
+  margin: 2rem 9rem;
+}
