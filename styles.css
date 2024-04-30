@@ -1,26 +1,180 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins&family=Roboto+Condensed&display=swap");
-
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-/* Color principal: #09eab4 (un verde azulado vibrante para llamar la atención)
-Color secundario: #93fcec (un cian claro para contrastar)
-Color de fondo: #0c3c4c (un azul oscuro para dar profundidad)
-Color de texto: #7a7985 (un gris suave para el texto principal)
-Acentos: #bcbabc (un gris claro para elementos secundarios) y #2c2443 (un morado oscuro para destacar áreas importantes) */
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+  header {
+    padding: 1rem 2%;
+  }
+
+  .inicio {
+    padding: 3rem 0;
+    text-align: center;
+  }
+
+  .inicio h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .inicio h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mision {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .mision h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .mision p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .cuadros {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0rem 2rem;
+    margin: 0 auto;
+  }
+
+  .box {
+    width: 90%;
+    margin-bottom: 1rem;
+  }
+
+  .propuesta {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .propuesta h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .propuesta p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contacto {
+    padding: 2rem 0;
+    text-align: center;
+  }
+
+  .contacto h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/* Estilos para dispositivos con una anchura mínima de 768px (ordenadores y tabletas) */
+@media (min-width: 768px) {
+  header {
+    padding: 2rem 5%;
+  }
+
+  .inicio {
+    padding: 5rem 0;
+    text-align: center;
+  }
+
+  .inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .inicio h2 {
+    font-size: 1.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .mision {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .mision h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .mision p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .cuadros {
+    padding: 4rem 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0% auto;
+  }
+
+  .box {
+    width: 45%;
+    margin-bottom: 0;
+  }
+
+  .propuesta {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .propuesta h4 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .propuesta p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+
+  .contacto {
+    padding: 4rem 0;
+    text-align: center;
+  }
+
+  .contacto h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .contacto p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Estilos generales */
 body {
   font-family: "Poppins", sans-serif;
   background-color: #ebebeb;
 }
 
 header {
-  background-image: linear-gradient(to bottom, #0c3c4c, #08203a);
-  padding: 0 5%;
+  background-image: linear-gradient(to bottom, #0c3b4b, #08203a);
   box-shadow: 1px 1px 4px 1px black;
 }
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -34,17 +188,19 @@ nav ul {
   color: aliceblue;
   gap: 3rem;
 }
+
+nav ul a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
 li {
   list-style: none;
-}
-a {
-  color: #bcbabc;
-  text-decoration: none;
 }
 
 main {
   color: dimgrey;
-  margin-top: 1rem;
+  margin: 1rem 9%;
 }
 
 .flex {
@@ -58,51 +214,9 @@ h1 {
   color: #09eab4;
 }
 
-.inicio {
-  padding: 5rem 0;
-  line-height: 50px;
-}
-.inicio h2 {
-  color: #e4e4e4;
-}
-
-.mision {
-  /* border: 2px red solid; */
-  width: 50rem;
-  margin: 0 auto;
-}
-
-/* ---------------------------------------------------------- */
-
-.cuadros {
-  margin-top: 3rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-
 .box {
-  border: 1px solid rgb(109, 109, 109);
+  border: 2px #696969 solid;
   border-radius: 9px;
-  max-height: 16rem;
-  width: 24rem;
-  padding: 1rem;
-  background-color: #ffffff16;
-}
-
-.propuesta {
-  width: 40rem;
-  margin: 2rem auto;
-}
-
-/* ---------------------------------------------------------- */
-
-.fab {
-  color: #bcbabc;
-}
-.contacto {
-  color: #212121;
-  margin: 2rem 9rem;
+  padding: 1% 5%;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
 }
