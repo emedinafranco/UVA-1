@@ -1,222 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 767px) {
-  header {
-    padding: 1rem 2%;
-  }
+:root {
+  --main-gradient: linear-gradient(to bottom, #0c3b4b, #08203a);
 
-  .inicio {
-    padding: 3rem 0;
-    text-align: center;
-  }
-
-  .inicio h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .mision {
-    padding: 2rem 0;
-    text-align: center;
-  }
-
-  .mision h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .mision p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .cuadros {
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0rem 2rem;
-    margin: 0 auto;
-  }
-
-  .box {
-    width: 90%;
-    margin-bottom: 1rem;
-  }
-
-  .propuesta {
-    padding: 2rem 0;
-    text-align: center;
-  }
-
-  .propuesta h4 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .propuesta p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contacto {
-    padding: 2rem 0;
-    text-align: center;
-  }
-
-  .contacto h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .contacto p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-  }
+  --font-family: "Poppins", sans-serif;
 }
 
-/* Estilos para dispositivos con una anchura mínima de 768px (ordenadores y tabletas) */
-@media (min-width: 768px) {
-  header {
-    padding: 2rem 5%;
-  }
-
-  .inicio {
-    padding: 5rem 0;
-    text-align: center;
-  }
-
-  .inicio h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
-  }
-
-  .inicio h2 {
-    font-size: 1.8rem;
-    margin-bottom: 2rem;
-  }
-
-  .mision {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .mision h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .mision p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .cuadros {
-    padding: 4rem 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 0% auto;
-  }
-
-  .box {
-    width: 45%;
-    margin-bottom: 0;
-  }
-
-  .propuesta {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .propuesta h4 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .propuesta p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-
-  .contacto {
-    padding: 4rem 0;
-    text-align: center;
-  }
-
-  .contacto h3 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-  }
-
-  .contacto p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-}
-
-/* Estilos generales */
 body {
-  font-family: "Poppins", sans-serif;
-  background-color: #ebebeb;
+  font-family: var(--font-family);
+  background-color: #f5f5f5;
 }
-
 header {
-  background-image: linear-gradient(to bottom, #0c3b4b, #08203a);
   box-shadow: 1px 1px 4px 1px black;
+  margin-bottom: 3rem;
 }
 
 nav {
+  height: 6em;
+  background-image: var(--main-gradient);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  font-weight: 400;
-  font-style: normal;
 }
 
-nav ul {
-  display: flex;
+#logo {
   color: aliceblue;
-  gap: 3rem;
 }
 
-nav ul a {
+#logo::first-letter {
+  color: red;
+}
+
+ul {
+  display: flex;
+  gap: 2em;
+  list-style: none;
+}
+
+ul a {
   color: aliceblue;
   text-decoration: none;
 }
 
-li {
-  list-style: none;
+.oferta {
+  background-color: #121212;
+  color: aliceblue;
+  padding: 2em 1.5rem;
 }
 
-main {
-  color: dimgrey;
-  margin: 1rem 9%;
+.subtitulo {
+  margin-top: 1rem;
+  font-weight: 400;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
-.flex {
+.servicios {
+  margin: 3rem 1rem;
+  column-gap: 3rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}
+
+.card {
+  border-radius: 20px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 1px 1px 4px 1px black;
+  padding: 0 0 2rem 0;
+  margin-bottom: 1.5rem;
+  width: 25rem;
+}
+
+.card-title {
+  background-color: #0076c7;
+  color: aliceblue;
+  font-size: 1.2rem;
+  padding: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.card-precios {
+  font-size: 1.3rem;
+}
+
+.card-precios small {
+  color: #585858;
+}
+
+.card-precios strong {
+  color: #0076c7;
+  font-size: 1.8rem;
+}
+
+.card-precios p {
+  color: #0076c7;
+}
+
+.card-precios button {
+  margin-top: 1rem;
+  background-color: #0076c7;
+  width: 14rem;
+  padding: 0.7em 0;
+  border: none;
+  border-radius: 5px;
+  color: aliceblue;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.card-precios button:hover {
+  cursor: pointer;
+  transition: 350ms;
+  box-shadow: 1px 1px 9px 1px black;
+}
+
+.flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
-
-h1 {
-  color: #09eab4;
+.mision {
+  padding: 0.8rem 3rem;
+  background-color: #fafafa;
+  border-top: solid 9px rgba(0, 0, 0, 0.089);
+  /* margin-top: .2rem; */
 }
 
-.box {
-  border: 2px #696969 solid;
-  border-radius: 9px;
-  padding: 1% 5%;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 8px 16px 0px;
+.mision p {
+  font-size: 0.9rem;
+}
+
+.nosotros {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: aliceblue;
+  justify-content: center;
+}
+
+.nosotros p {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.nosotros ul {
+  display: block;
+  list-style: disc;
+}
+
+.nosotros li {
+  font-size: 0.9rem;
+}
+
+.valores-container {
+  background-color: #084c8b;
+  padding: 1rem 2.4rem;
+}
+
+.servicios-container {
+  background-color: #005fb1;
+  padding: 1rem 2.4rem;
+}
+
+.propuesta {
+  background-color: #f5f5f5;
+  margin: 1.1rem 0;
+  padding: 0 1rem;
+}
+
+footer {
+  margin-top: 1.1rem;
+  padding: 2rem 1rem;
+  background-color: #121212;
+  color: #fafafa;
+  font-size: 0.75rem;
+  text-align: center;
+}
+i {
+  color: #fafafa;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.5rem;
+}
+
+/* ADAPTACIONES A PANTALLAS */
+
+@media screen and (min-width: 880px) {
+  .oferta {
+    padding: 2em 4.5rem;
+  }
+
+  .mision {
+    padding: 3rem 5rem;
+  }
+
+  .propuesta {
+    padding: 2rem 2.5rem;
+  }
+  .nosotros p {
+    font-size: 1.8rem;
+  }
+  .nosotros li {
+    font-size: 1rem;
+  }
+
+  .valores-container,
+  .servicios-container {
+    padding: 3rem 2.4rem;
+  }
 }
