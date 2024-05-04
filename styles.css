@@ -5,9 +5,10 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* linear-gradient(to left top, #084c8b , #005fb1); */
 
 :root {
-  --main-gradient: linear-gradient(to bottom, #0c3b4b, #08203a);
+  --main-gradient: linear-gradient(to bottom, #084c8b, #08203a);
 
   --font-family: "Poppins", sans-serif;
 }
@@ -19,6 +20,7 @@ body {
 header {
   box-shadow: 1px 1px 4px 1px black;
   margin-bottom: 3rem;
+  animation: entrada-arriba 1200ms ease-in-out;
 }
 
 nav {
@@ -31,21 +33,27 @@ nav {
 
 #logo {
   color: aliceblue;
+  animation: entrada-izq 1600ms ease-in-out;
 }
 
 #logo::first-letter {
   color: red;
 }
 
-ul {
+header ul {
   display: flex;
   gap: 2em;
   list-style: none;
+  animation: entrada-der 1700ms ease-in-out;
 }
 
 ul a {
   color: aliceblue;
   text-decoration: none;
+}
+
+main {
+  animation: entrada-abajo 1500ms ease-in-out;
 }
 
 .oferta {
@@ -216,5 +224,51 @@ i {
   .valores-container,
   .servicios-container {
     padding: 3rem 2.4rem;
+  }
+}
+
+/*--------- ANIMACIONES ------------- */
+
+@keyframes entrada-abajo {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrada-arriba {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrada-izq {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes entrada-der {
+  0% {
+    opacity: 0;
+    transform: translateX(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
